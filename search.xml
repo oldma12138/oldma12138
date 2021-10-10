@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>书单</title>
+      <link href="/2021/10/10/%E4%B9%A6%E5%8D%95/"/>
+      <url>/2021/10/10/%E4%B9%A6%E5%8D%95/</url>
+      
+        <content type="html"><![CDATA[<p>《高性能mysql》</p><p>《RocketMQ技术内幕：RocketMQ架构设计与实现原理》</p><p>《数据密集型应用设计》</p><p>《Java并发编程实战》</p><p>《Java性能权威指南》</p><p>《重构》</p><p>《代码整洁之道》</p><p>《Effective Java》</p><p>《性能之巅：洞悉系统、企业与云计算》</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>jvm相关</title>
       <link href="/2021/09/20/jvm%E7%9B%B8%E5%85%B3/"/>
       <url>/2021/09/20/jvm%E7%9B%B8%E5%85%B3/</url>
