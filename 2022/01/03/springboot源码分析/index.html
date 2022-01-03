@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="homepage">
-<meta property="og:url" content="http://example.com/homepage/index.html">
+  <meta name="description" content="springboot源码分析功能点配置类1.@import(xxx.class) :将xxx.class 加载到容器 2.@ImportResource(“classpath:xxxx.xml”) 将类似 application.xml加载到容器中 自动化配置1.@EnableAutoConfiguration或者使用@SpringBootApplication 2.可以使用@SpringBoot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="易星の博客">
+<meta property="og:url" content="http://example.com/2022/01/03/springboot%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="易星の博客">
+<meta property="og:description" content="springboot源码分析功能点配置类1.@import(xxx.class) :将xxx.class 加载到容器 2.@ImportResource(“classpath:xxxx.xml”) 将类似 application.xml加载到容器中 自动化配置1.@EnableAutoConfiguration或者使用@SpringBootApplication 2.可以使用@SpringBoot">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-09-11T13:48:32.000Z">
-<meta property="article:modified_time" content="2021-09-11T13:48:32.702Z">
+<meta property="article:published_time" content="2022-01-03T08:09:30.164Z">
+<meta property="article:modified_time" content="2022-01-03T08:09:30.165Z">
 <meta property="article:author" content="yixin">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/homepage/">
+<link rel="canonical" href="http://example.com/2022/01/03/springboot%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">
 
 
 <script id="page-configurations">
@@ -38,13 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>homepage | 易星の博客
-</title>
+  <title> | 易星の博客</title>
   
 
 
@@ -184,43 +185,93 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/03/springboot%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/onpman.jpg">
+      <meta itemprop="name" content="yixin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="易星の博客">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">homepage
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-<div class="post-meta">
+              <time title="创建时间：2022-01-03 16:09:30" itemprop="dateCreated datePublished" datetime="2022-01-03T16:09:30+08:00">2022-01-03</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h4 id="springboot源码分析"><a href="#springboot源码分析" class="headerlink" title="springboot源码分析"></a>springboot源码分析</h4><h5 id="功能点"><a href="#功能点" class="headerlink" title="功能点"></a>功能点</h5><h6 id="配置类"><a href="#配置类" class="headerlink" title="配置类"></a>配置类</h6><p>1.@import(xxx.class) :将xxx.class 加载到容器</p>
+<p>2.@ImportResource(“classpath:xxxx.xml”) 将类似 application.xml加载到容器中</p>
+<h6 id="自动化配置"><a href="#自动化配置" class="headerlink" title="自动化配置"></a>自动化配置</h6><p>1.@EnableAutoConfiguration或者使用@SpringBootApplication</p>
+<p>2.可以使用@SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })将不需要的自动化配置jar排除</p>
+<h6 id="强大的-SpringBootApplication注解"><a href="#强大的-SpringBootApplication注解" class="headerlink" title="强大的@SpringBootApplication注解"></a>强大的@SpringBootApplication注解</h6><p>@EnableAutoConfiguration: 启用Spring Boot 的自动配置机制</p>
+<p>@ComponentScan:@Component在应用程序所在的包上启用扫描（查看最佳实践）</p>
+<p>@SpringBootConfiguration: 启用在上下文中注册额外的 bean 或导入额外的配置类。Spring 标准的替代方案@Configuration，可帮助您在集成测试中检测配置。</p>
+<h6 id="启动器建筑者"><a href="#启动器建筑者" class="headerlink" title="启动器建筑者"></a>启动器建筑者</h6><p>new SpringApplicationBuilder()</p>
+<h5 id="功能点对应源码"><a href="#功能点对应源码" class="headerlink" title="功能点对应源码"></a>功能点对应源码</h5>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/01/03/test/" rel="prev" title="test">
+      <i class="fa fa-chevron-left"></i> test
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -271,6 +322,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#springboot%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">springboot源码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E7%82%B9"><span class="nav-number">1.1.</span> <span class="nav-text">功能点</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%B1%BB"><span class="nav-number">1.1.1.</span> <span class="nav-text">配置类</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E9%85%8D%E7%BD%AE"><span class="nav-number">1.1.2.</span> <span class="nav-text">自动化配置</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%BC%BA%E5%A4%A7%E7%9A%84-SpringBootApplication%E6%B3%A8%E8%A7%A3"><span class="nav-number">1.1.3.</span> <span class="nav-text">强大的@SpringBootApplication注解</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E5%99%A8%E5%BB%BA%E7%AD%91%E8%80%85"><span class="nav-number">1.1.4.</span> <span class="nav-text">启动器建筑者</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E7%82%B9%E5%AF%B9%E5%BA%94%E6%BA%90%E7%A0%81"><span class="nav-number">1.2.</span> <span class="nav-text">功能点对应源码</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
